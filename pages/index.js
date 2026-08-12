@@ -39,16 +39,19 @@ const id = uuidv4();
   date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
 
   const values = { name, date,id };
-  const todo = generateTodo(values);
+  const renderTodo = (item) => {
+  const todo = generateTodo(item);
   todosList.append(todo);
+};
+renderTodo(values);
   closeModal(addTodoPopup);
   newTodoValidator.resetValidation();
 });
 
 initialTodos.forEach((item) => {
-  const todo = generateTodo(item);
-  todosList.append(todo);
+  renderTodo(item)
 });
+
 
 const newTodoValidator= new FormValidator(validationConfig, addTodoForm);
 newTodoValidator.enableValidation();
