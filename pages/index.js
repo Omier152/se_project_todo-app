@@ -22,6 +22,11 @@ const generateTodo = (data) => {
   return todo.getView();
 };
 
+const renderTodo = (item) => {
+  const todo = generateTodo(item);
+  todosList.append(todo);
+};
+
 addTodoButton.addEventListener("click", () => {
   openModal(addTodoPopup);
 });
@@ -39,11 +44,7 @@ const id = uuidv4();
   date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
 
   const values = { name, date,id };
-  const renderTodo = (item) => {
-  const todo = generateTodo(item);
-  todosList.append(todo);
-};
-renderTodo(values);
+  renderTodo(values);
   closeModal(addTodoPopup);
   newTodoValidator.resetValidation();
 });
