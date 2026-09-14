@@ -13,4 +13,4 @@ Give a description of the technologies and techniques used. Pictures, GIFs, or s
 ## Deployment
 
 This project is deployed on GitHub Pages:
-https://github.com/Omier152/se_project_todo-app
+https://github.com/Omier152/se_project_todo-app.git

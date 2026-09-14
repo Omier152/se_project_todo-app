@@ -3,7 +3,7 @@ import { initialTodos, validationConfig} from "../utils/constants.js"
 import Todo from  "../components/Todo.js";
 import FormValidator from '../components/FormValidator.js';
 import Popup from '../components/Popup.js';
-import PopupWithForms from '../components/PopupWithForms.js';
+import PopupWithForm from '../components/PopupWithForm.js';
 import Section from '../components/Section.js';
 import TodoCounter from '../components/TodoCounter.js';
 
@@ -22,11 +22,11 @@ const section = new Section({
     renderTodo(item);
   },
   containerSelector: ".todos__list",
-}); 
+});
 
 
 
-const addTodoPopup = new PopupWithForms({
+const addTodoPopup = new PopupWithForm({
   popupSelector:"#add-todo-popup",
   handleFormSubmit: (inputValues) => {
 
